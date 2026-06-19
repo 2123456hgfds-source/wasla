@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wasla-background: #f8fafc;
+  --wasla-surface: #f1f5f9;
+  --wasla-card: #ffffff;
+  --wasla-card-foreground: #0f172a;
+  --wasla-heading: #0f172a;
+  --wasla-body: #475569;
+  --wasla-muted: #94a3b8;
+  --wasla-border: #e2e8f0;
+  --wasla-primary: #2563eb;
+  --wasla-primary-hover: #1d4ed8;
+  --wasla-primary-foreground: #ffffff;
+  --wasla-primary-soft: #eff6ff;
+  --wasla-success: #16a34a;
+  --wasla-warning: #d97706;
+  --wasla-danger: #dc2626;
+}
+
+.dark {
+  --wasla-background: #0b1220;
+  --wasla-surface: #0f172a;
+  --wasla-card: #131c2e;
+  --wasla-card-foreground: #f1f5f9;
+  --wasla-heading: #f1f5f9;
+  --wasla-body: #94a3b8;
+  --wasla-muted: #64748b;
+  --wasla-border: #1f2b40;
+  --wasla-primary: #3b82f6;
+  --wasla-primary-hover: #60a5fa;
+  --wasla-primary-foreground: #0b1220;
+  --wasla-primary-soft: #16233f;
+  --wasla-success: #22c55e;
+  --wasla-warning: #f59e0b;
+  --wasla-danger: #ef4444;
+}
+
+* {
+  border-color: var(--wasla-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--wasla-background);
+  color: var(--wasla-body);
+  font-feature-settings: "tnum" 1;
+}
+
+::selection {
+  background-color: var(--wasla-primary-soft);
+  color: var(--wasla-primary-hover);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--wasla-border);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #243044;
+}
+
+/* Visible keyboard focus ring across the app */
+:focus-visible {
+  outline: 2px solid var(--wasla-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
